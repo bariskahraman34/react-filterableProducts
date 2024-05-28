@@ -30,7 +30,7 @@ export const FruitsTable = ({inputValue,isProductInStock}: TableWrapperProps) =>
             </tr>
           </thead>
           <tbody>
-            {filteredProducts.map((fruit) => <tr key={fruit.id}> <td>{`${fruit.name} ${fruit.price}`}</td></tr>)}
+            {filteredProducts.map((fruit) => <tr key={fruit.id}> <td style={fruit.inStock ? {color:"#000"} : {color:"red"}} >{`${fruit.name} ${fruit.price}`}</td></tr>)}
           </tbody>
         </table>
         : 

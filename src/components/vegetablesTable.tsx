@@ -27,7 +27,7 @@ export const VegetablesTable = ({inputValue,isProductInStock} : TableWrapperProp
             </tr>
           </thead>
           <tbody>
-          {isProductInStock ? filteredProducts.filter(veggy => veggy.inStock).map((veggy) => <tr key={veggy.id}> <td>{`${veggy.name} ${veggy.price}`}</td></tr>) : filteredProducts.map((veggy) => <tr key={veggy.id}> <td>{`${veggy.name} ${veggy.price}`}</td></tr>)}
+          {isProductInStock ? filteredProducts.filter(veggy => veggy.inStock).map((veggy) => <tr key={veggy.id}> <td>{`${veggy.name} ${veggy.price}`}</td></tr>) : filteredProducts.map((veggy) => <tr key={veggy.id}> <td style={veggy.inStock ? {color:"#000"} : {color:"red"}} >{`${veggy.name} ${veggy.price}`}</td></tr>)}
           </tbody>
         </table>
         : 
